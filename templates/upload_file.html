@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wafer Fault Detection - Upload CSV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .upload-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+      width: 400px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .upload-box {
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin: 10px auto;
+    }
+
+    .btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="upload-container">
+    <h1>Upload CSV for Prediction</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <div class="upload-box">
+        <input type="file" name="file" accept=".csv" required>
+      </div>
+      <button class="btn" type="submit">Upload & Predict</button>
+    </form>
+  </div>
+
+</body>
+</html>
